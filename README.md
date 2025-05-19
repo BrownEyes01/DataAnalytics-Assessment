@@ -6,10 +6,14 @@ This particular query was target to get top customers which had dual plans (Savi
 
 ## Assessment 2: Transaction Frequency Analysis
 The finance team wants to understand how often customers transact and to categorize the customers by their transaction frequency.
-This script has two parts with the first part (CTE) giving us the avg monthly transaction for each customer. i.e Customer A could have 3.16 transactions over a period of 5months. Then the outer query gives a overall average transactions for all customers, and also implementing a category bucket that groups these customers into HIGH, MEDIUM, LOW depnding on the number of customers that fall into them.
+<br> This script has two parts with the first part (CTE) giving us the avg monthly transaction for each customer. i.e Customer A could have 3.16 transactions over a period of 5months. Then the outer query gives a overall average transactions for all customers, and also implementing a category bucket that groups these customers into HIGH, MEDIUM, LOW depnding on the number of customers that fall into them.
 
 ## Assessment 3: Account Inactivity Alert
 Operational Team needs to flag non-transacting/inactive accounts over a period of 1 year.
-This was done by getting the last/max transaction date for each user/customers and then a filter was applied to select account that fall into the bucket of inactivity for the last 365 days.
+<br> This was done by getting the last/max transaction date for each user/customers and then a filter was applied to select account that fall into the bucket of inactivity for the last 365 days.
 
 ## Assessment 4: Customer Lifetime Value (CLV) Estimation
+This simple model find the summarized lifecycle of a customer, and also their Customer Lifetime Value (CLV).
+<br> The script gives an initial calculation of the tenure days (gotten from the joined_date column), the total transactions carried out for this period and the profit which is the sum of their deposits multiplied by 0.1%. The outer result then uses this information to get the CLVs for each customer, with the customers having the highest CLVs topping the charts.
+
+### This brings me to the end of my assessment. Thank you.
